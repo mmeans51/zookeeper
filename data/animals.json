@@ -4,56 +4,56 @@
       "id": "0",
       "name": "Spindle",
       "species": "bear",
-      "diet": "carnivore",
+      "diet": "omnivore",
       "personalityTraits": ["hungry", "zany", "loving"]
     },
     {
       "id": "1",
       "name": "Terry",
       "species": "gorilla",
-      "diet": "omnivore",
+      "diet": "folivore",
       "personalityTraits": ["anxious", "goofy"]
     },
     {
       "id": "2",
       "name": "Erica",
       "species": "gorilla",
-      "diet": "omnivore",
+      "diet": "folivore",
       "personalityTraits": ["quirky", "rash"]
     },
     {
       "id": "3",
       "name": "Noel",
       "species": "bear",
-      "diet": "carnivore",
+      "diet": "omnivore",
       "personalityTraits": ["impish", "sassy", "brave"]
     },
     {
       "id": "4",
       "name": "Coco",
       "species": "penguin",
-      "diet": "herbivore",
+      "diet": "piscivore",
       "personalityTraits": ["loving", "goofy"]
     },
     {
       "id": "5",
       "name": "Marcy",
       "species": "ostrich",
-      "diet": "herbivore",
+      "diet": "omnivore",
       "personalityTraits": ["hungry", "goofy"]
     },
     {
       "id": "6",
       "name": "Bodhi",
       "species": "Doggo",
-      "diet": "herbivore",
+      "diet": "omnivore",
       "personalityTraits": ["zany"]
     },
     {
       "id": "7",
       "name": "Cassie",
       "species": "Doggo",
-      "diet": "herbivore",
+      "diet": "omnivore",
       "personalityTraits": ["hungry", "zany", "goofy"]
     },
     {
@@ -69,13 +69,6 @@
       "species": "Tiger",
       "diet": "carnivore",
       "personalityTraits": ["hungry"]
-    },
-    {
-      "name": "Sufjan",
-      "species": "Koala Bear",
-      "diet": "herbivore",
-      "personalityTraits": ["loving"],
-      "id": "10"
     }
   ]
 }
