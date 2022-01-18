@@ -2,6 +2,13 @@ const { animals } = require('./data/animals');
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const fs = require('fs');
+const path =  require('path');
+
+//parse incoming string or array data
+app.use(express.urlencoded({ extended: true}));
+//parse incoming json data
+app.use(express.json());
 
 app.get('/api/animals', (req, res) => {
   let results = animals;
@@ -11,11 +18,22 @@ app.get('/api/animals', (req, res) => {
   res.json(results);
 });
 
+
 function findById(id, animalsArray) {
   const result = animalsArray.filter(animal => animal.id === id)[0];
   return result;
 }
 
+function createNewAnimal(body, animalsArray) {
+  const animal = body;
+  animalsArray.push(animal);
+  fs.writeFileSync(
+    path.join(__dirname, './data/animals.json'),
+    json.stringify({ animals: animalsArray }, null, 2)
+  );
+
+  return animal;
+}
 app.get('/api/animals/:id', (req, res) => {
   const result = findById(req.params.id, animals);
   if (result) {
@@ -23,6 +41,15 @@ app.get('/api/animals/:id', (req, res) => {
   } else {
     res.send(404);
   }
+});
+
+app.post('/api/animals', (req, res) => {
+  //req.body is where our incoming content will be
+  req.body.id = animals.length.toString();
+
+  const animal = createNewAnimal(req.body, animals);
+
+  res.json(req.body);
 });
 
 app.listen(PORT, () => {
