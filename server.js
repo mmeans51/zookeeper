@@ -5,6 +5,7 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 
+app.use(express.static('public'));
 //parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 //parse incoming json data
