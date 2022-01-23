@@ -33,6 +33,18 @@ const getAnimals = (formData = {}) => {
 
 };
 
+fetch(queryUrl)
+.then(response => {
+  if (!response.ok) {
+    return alert('Error: ' + response.statusTest);
+  }
+  return response.json();
+})
+.then(animalData => {
+  console.log(animalData);
+  printResults(animalData);
+})
+
 const handleGetAnimalsSubmit = event => {
   event.preventDefault();
   const dietRadioHTML = $animalForm.querySelectorAll('[name="diet"]');
